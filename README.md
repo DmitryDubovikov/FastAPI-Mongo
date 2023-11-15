@@ -4,9 +4,9 @@ Web application for recognizing forms.
 
 
 ## Technologies used:
-* __FastAPI:__
-* __MongoDB:__
-* __Docker:__
+* __FastAPI__
+* __MongoDB__
+* __Docker__
 
 ### To run:
 
