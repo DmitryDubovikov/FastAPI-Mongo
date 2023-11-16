@@ -1,8 +1,6 @@
 from pymongo import MongoClient
+from app import MONGO_URI, DB_NAME, COLLECTION_NAME
 
-MONGO_URI = "mongodb://root:example@mongo:27017/"
-DB_NAME = "form_templates"
-COLLECTION_NAME = "form_templates"
 
 form_template = {
     "name": "user_email + user_phone",
