@@ -7,13 +7,17 @@ from motor.motor_asyncio import AsyncIOMotorClient
 
 from utils import validate_form_value, typehint_dict
 
+MONGO_URI = "mongodb://root:example@mongo:27017/"
+DB_NAME = "form_templates"
+COLLECTION_NAME = "form_templates"
+
 app = FastAPI()
-mongo_client = AsyncIOMotorClient("mongodb://root:example@mongo:27017/")
-db = mongo_client["form_templates"]
+mongo_client = AsyncIOMotorClient(MONGO_URI)
+db = mongo_client[DB_NAME]
 
 
 async def find_matching_template(form_data):
-    async for template in db.form_templates.find():
+    async for template in db[COLLECTION_NAME].find():
         match = True
 
         for template_field_name, template_field_type in template.items():
