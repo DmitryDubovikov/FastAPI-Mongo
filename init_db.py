@@ -1,6 +1,6 @@
 from pymongo import MongoClient
-from app import MONGO_URI, DB_NAME, COLLECTION_NAME
 
+from app import COLLECTION_NAME, DB_NAME, MONGO_URI
 
 form_template = {
     "name": "user_email + user_phone",
